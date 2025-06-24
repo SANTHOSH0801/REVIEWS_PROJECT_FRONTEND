@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import '../css/LoginPage.css';
 import Navbar from '../Components/Navbar';
-import bgImage from '../assets/LoginbagroundImage.avif';
+import bgImage from '../assets/bg-login.jpg';
 
 
 function LoginPage() {
@@ -71,6 +71,15 @@ function LoginPage() {
         <>
             <Navbar />
             <main className="main-container-loginpage signup-container-loginpage" style={containerStyle}>
+                <div className="details">
+                    <h2>To get started as Admin</h2>
+                    <p>Please use the following credentials:</p>
+                    <div className="Email">
+                        <h3>Email: neelasaisanthosh@gmail.com</h3>
+                        <h3>Password: Sai.2003$</h3>
+                    </div>
+                </div>
+
                 <div className="form-section-loginpage">
                     <h1 className="form-title-loginpage">Login</h1>
                     <form onSubmit={handleSubmit}>
@@ -100,9 +109,7 @@ function LoginPage() {
                     </form>
                     {errorMessage && <p className="error-message-loginpage">{errorMessage}</p>}
                 </div>
-                <div className="image-section-loginpage">
-                    {/* You can insert an <img> here with className="signup-image-loginpage" if needed */}
-                </div>
+                
             </main>
         </>
 
