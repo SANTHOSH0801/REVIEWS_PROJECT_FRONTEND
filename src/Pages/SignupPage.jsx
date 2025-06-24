@@ -29,9 +29,9 @@ function SignupPage() {
 async function submitData(Data) {
         try {
             let url = "https://reviews-app-backend-023o.onrender.com/api/users/register";
-            if (Data.role === "Store Owner") {
-                url = "https://reviews-app-backend-023o.onrender.com/api/storeOwnerAuth/registerWithStore";
-            }
+            // if (Data.role === "Store Owner") {
+            //     url = "https://reviews-app-backend-023o.onrender.com/api/storeOwnerAuth/registerWithStore";
+            // }
             const response = await axios.post(url, Data);
             console.log("Signup successful", response.data);
             setSuccessMessage("User  registered successfully! Please login to the account"); // Set success message
@@ -179,7 +179,7 @@ async function submitData(Data) {
                         className="input-field2"
                     >
                         <option value="Normal User">Normal User</option>
-                        <option value="System Administrator">System Administrator</option>
+                        {/* <option value="System Administrator">System Administrator</option> */}
                         <option value="Store Owner">Store Owner</option>
                     </select>
                     {Data.role === "Store Owner" && (
